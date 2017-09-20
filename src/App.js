@@ -6,6 +6,10 @@ import PostitList from './components/PostitList';
 import Footer from './components/Footer';
 import './App.css';
 
+const styles = {
+  list_item: { listStyleType: 'none' }
+}
+
 const App = () => (
   <div className="App">
     <div className="App-header">

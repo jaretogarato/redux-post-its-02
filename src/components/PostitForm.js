@@ -30,9 +30,13 @@ class PostitForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input value={this.state.name} onChange={this.onChange} />
-      </form>
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <span><strong>Make a new Post-It: </strong></span>
+          <input value={this.state.name} onChange={this.onChange} />
+        </form>
+        <div>&nbsp;</div>
+      </div>
     )
   }
 }

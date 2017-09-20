@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Postit from './Postit';
+import { Card, Icon, Image } from 'semantic-ui-react';
 
 const viewable = (postits, currentFilter) => {
   switch(currentFilter) {
@@ -13,15 +14,13 @@ const viewable = (postits, currentFilter) => {
   }
 }
 
-const styles = {
-  list_item: { list-style-type:none }
-}
+
 
 const PostitList = ({ postits, filter }) => (
   // <div>Postit List</div>
-  <ul style={list_item}>
-    { viewable(postits, filter).map( t => <Postit key={t.id} {...t} /> ) }
-  </ul>
+    <div>
+      { viewable(postits, filter).map( t => <Postit key={t.id} {...t} /> ) }
+    </div>
 )
 
 const mapStateToProps = (state) => {
